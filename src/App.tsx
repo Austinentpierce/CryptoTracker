@@ -1,6 +1,22 @@
 import React from 'react'
 
 export function App() {
+
+  type CryptoCurrencyType = {
+    id:
+    rank: 
+    symbol: 
+    name: 
+    supply: 
+    maxSupply: 
+    marketCapUsd:
+    volumeUsd24hr: 
+    priceUsd: 
+    changePercent24hr: 
+    vwap24hr: 
+    explorer: 
+    
+  }
   return (
     <main>
       <header>
