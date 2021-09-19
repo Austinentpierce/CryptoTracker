@@ -15,6 +15,10 @@ export function App() {
           the app will update every 10 seconds to see the updated price
         </p>
       </div>
+      <section>
+        {'  '}
+        {'  '}
+      </section>
     </main>
   )
 }
