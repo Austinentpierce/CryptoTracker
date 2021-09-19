@@ -27,11 +27,15 @@ body {
 }
 header {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: 'MedievalSharp', cursive;
   display: flex;
   margin-left: 1.25rem;
   justify-content: center;
+  text-shadow: orange 0.15rem 0.15rem;
+}
+.headinstruct {
+  text-decoration: underline blue;
 }
 .title {
   text-decoration: underline;
@@ -42,20 +46,26 @@ header {
   color: blue;
   background-color: white;
   border-radius: 0.85rem;
-  box-shadow: blueviolet solid 3rem;
+  box-shadow: orange 0.75rem 0.75rem;
   font-size: large;
   font-family: 'Source Code Pro', monospace;
   margin-left: 3rem;
   margin-right: 3rem;
+  text-shadow: orange 0.1rem 0.1rem;
 }
 p {
   text-align: center;
+  margin: 2rem;
 }
 .bitcoin {
   color: orange;
   text-decoration: none;
+  margin-top: 1.5rem;
+  text-shadow: white 0.1rem 0.1rem;
 }
 .ethereum {
   color: orange;
   text-decoration: none;
+  margin-top: 1.5rem;
+  text-shadow: white 0.1rem 0.1rem;
 }
