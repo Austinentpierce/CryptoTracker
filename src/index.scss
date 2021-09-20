@@ -99,3 +99,22 @@ ul {
   margin-top: 1.5rem;
   text-shadow: white 0.1rem 0.1rem;
 }
+@media all and (max-width: 375px) {
+  li {
+    font-size: 1rem;
+    justify-content: center;
+    margin-right: 5rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    text-shadow: orange 0.1rem 0.1rem;
+    margin-top: 2rem;
+  }
+  .ethereum {
+    margin-bottom: 1rem;
+  }
+  .bitcoin {
+    margin-bottom: 1rem;
+  }
+}
