@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function App() {
-  type CryptoCurrencyType = {
+  type cryptoCurrencyType = {
     id: string
     rank: number
     symbol: string
@@ -15,6 +15,26 @@ export function App() {
     vwap24hr: number
     explorer: string
   }
+  const [cryptoCurrencyData, setCryptoCurrencyData] = useState<
+    cryptoCurrencyType[]
+  >([])
+
+  function inputData() {
+    async function fetchData() {
+      const response = await fetch('https://api.coincap.io/v2/assets')
+      if (response.ok) {
+        const json = await response.json()
+        setCryptoData(json.data)
+        console.log(json.data)
+      }
+    }
+    fetchData()
+  }
+  useEffect(loadData, [])
+
+  useEffect(function () {
+    setInterval(loadData, 10000)
+  }, [])
   return (
     <main>
       <header>
@@ -29,10 +49,6 @@ export function App() {
           the app will update every 10 seconds to see the updated price
         </p>
       </div>
-      <section>
-        {'  '}
-        {'  '}
-      </section>
     </main>
   )
 }
