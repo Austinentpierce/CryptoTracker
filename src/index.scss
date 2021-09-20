@@ -26,13 +26,19 @@ body {
   height: 100vh;
 }
 header {
-  color: white;
+  color: blue;
   font-size: 1.25rem;
   font-family: 'MedievalSharp', cursive;
   display: flex;
-  margin-left: 1.25rem;
   justify-content: center;
   text-shadow: orange 0.15rem 0.15rem;
+  position: sticky;
+  top: 0;
+  padding-right: 0rem;
+  border-radius: 0.85rem;
+  background-color: white;
+  box-shadow: orange 0.5rem 0.5rem;
+  border: solid black;
 }
 .headinstruct {
   text-decoration: underline blue;
@@ -40,23 +46,42 @@ header {
 .title {
   text-decoration: underline;
 }
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
 .instructions {
   text-align: center;
   color: blue;
   background-color: white;
   border-radius: 0.85rem;
-  box-shadow: orange 0.75rem 0.75rem;
-  font-size: large;
+  box-shadow: orange 0.5rem 0.5rem;
+  font-size: 1.25rem;
   font-family: 'Source Code Pro', monospace;
   margin-left: 3rem;
   margin-right: 3rem;
+  text-shadow: orange 0.1rem 0.1rem;
+  border: solid black;
+}
+li {
+  list-style: none;
+  margin: 1.25rem;
+  font-family: 'MedievalSharp', cursive;
+  color: blue;
   text-shadow: orange 0.1rem 0.1rem;
 }
 p {
   text-align: center;
   margin: 2rem;
 }
+ul {
+  background-color: white;
+  border-radius: 0.85rem 0.85rem;
+  box-shadow: orange 0.1rem 0.1rem;
+  border: solid black;
+}
+
 .bitcoin {
   color: orange;
   text-decoration: none;

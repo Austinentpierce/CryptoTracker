@@ -12,8 +12,6 @@ export function App() {
     volumeUsd24hr: number
     priceUsd: number
     changePercent24hr: number
-    vwap24hr: number
-    explorer: string
   }
   const [cryptoCurrencyData, setCryptoCurrencyData] = useState<
     cryptoCurrencyType[]
@@ -24,16 +22,16 @@ export function App() {
       const response = await fetch('https://api.coincap.io/v2/assets')
       if (response.ok) {
         const json = await response.json()
-        setCryptoData(json.data)
+        setCryptoCurrencyData(json.data)
         console.log(json.data)
       }
     }
     fetchData()
   }
-  useEffect(loadData, [])
+  useEffect(inputData, [])
 
   useEffect(function () {
-    setInterval(loadData, 10000)
+    setInterval(inputData, 10000)
   }, [])
   return (
     <main>
@@ -42,13 +40,25 @@ export function App() {
         <h1 className="title">Crypto Currency Price Tracker</h1>
         <i className="ethereum fab fa-2x fa-ethereum"></i>
       </header>
-      <div className="instructions">
+      <section className="instructions">
         <h2 className="headinstruct">Instructions</h2>
         <p>
           This app was created to see current certain Crypto Currency prices and
           the app will update every 10 seconds to see the updated price
         </p>
-      </div>
+      </section>
+      <ul>
+        {cryptoCurrencyData.map((crypto) => {
+          return (
+            <li key={crypto.id}>
+              ${crypto.symbol} {crypto.id}: $
+              {Math.round(crypto.priceUsd * 100) / 100} Supply of coins:{' '}
+              {crypto.supply} Market cap: $
+              {Math.round(crypto.marketCapUsd * 100) / 100}
+            </li>
+          )
+        })}
+      </ul>
     </main>
   )
 }
